@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 
 export default function MainLayout({children}){
-    const [hidden, setHidden] = useState(false);
+    const [isHidden, setIsHidden] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
             if(window.scrollY > lastScrollY && window.scrollY > 100){
-                setHidden(true)
+                setIsHidden(true)
             } else {
-                setHidden(false)
+                setIsHidden(false)
             }
 
             setLastScrollY(window.scrollY);
@@ -23,7 +23,7 @@ export default function MainLayout({children}){
     
     return(
         <div className="bg-slate-900 text-slate-200 min-h-screen">
-            <Header hidden={hidden} />
+            <Header isHidden={isHidden} />
             <main>{children}</main>
         </div>
     )
