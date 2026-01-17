@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================================== Hero(Home) Section =====================================*/
+/* Gradient text for logo */
+#logo span {
+  background: linear-gradient(270deg, #df8909, #ff1d15);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Nav-bar underline animation */
+.nav-bar a {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(270deg, #df8909, #ff1d15);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-bar a:hover {
+  opacity: 1;
+}
+
+.nav-bar a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Shadow box for avatar */
+.home-img {
+  box-shadow: 0 0px 25px rgba(0, 0, 255, 0.25);
+  transition: 0.4s ease-in-out;
+}
+
+.home-img:hover {
+  box-shadow: 0 0px 25px rgba(0, 0, 255, 0.2), 0 0px 50px rgba(0, 255, 255, 0.2),
+    0 0px 100px rgba(0, 0, 255, 0.2);
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+.socials a:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2), 0 0 20px rgba(59, 130, 246, 0.2),
+    0 0 30px rgba(59, 130, 246, 0.2);
+}
+/* ===================================== Hero(Home) Section =====================================*/
+
+/* ===================================== Hero(Home) Section =====================================*/
+
+/* ===================================== Hero(Home) Section =====================================*/

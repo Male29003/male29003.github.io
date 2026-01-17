@@ -1,125 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./src/js/script.js"></script>
-</head>
-
-<body>
-    <div class="main">
-        <div class="nav_container">
-            <div class="nav_header">
-                <a href="https://github.com/Male29003" class="git_link" target="_blank">
-                    <i class="fa-brands fa-square-github fa-2xl nav_logo"></i>
-                    <h2>Nam</h2>
-                </a>
-            </div>
-            <ul class="nav_menu">
-                <li class="nav_items aboutme">
-                    <a href="#aboutme" class="nav_item_link">About me</a>
-                </li>
-                <li class="nav_items projects">
-                    <a href="#projects" class="nav_item_link">Projects</a>
-                </li>
-                <li class="nav_items contact">
-                    <a href="#contact" class="nav_item_link">Contact </a>
-                </li>
-            </ul>
-        </div>
-        <div class="content">
-            <!--============================HOME============================-->
-
-            <div id="aboutme" class="aboutme section">
-                <h3 class="section_item_title aboutme_title">About me</h3>
-
-                <div class="home_info">
-
-                    <div class="description">My name is Nam, I aspire to become a Frontend Developer.
-                        I have experience in designing and developing websites.
-                        Feel free to check out some of my projects if you're interested.
-                    </div>
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/nam-nguy%E1%BB%85n-17b807346/" class="social_link"
-                            type="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="" class="social_link">
-                            <i class="fa-brands fa-facebook" type="_blank"></i>
-                        </a>
-                        <a href="" class="social_link">
-                            <i class="fa-brands fa-square-github" type="_blank"></i>
-                        </a>
-                    </div>
-                    <a href="#projects" class="aboutme_scroll">
-                        <span>Projects</span>
-                        <i class="fa-solid fa-arrow-turn-down aboutme_scroll project_scroll"></i>
-                    </a>
-                    <div class="my_resume">
-                        <span>Here is my CV</span>
-                        <a href="./public/logo.png" class="resume" download>
-                            <i class="fa-regular fa-file-lines"></i>
-                        </a>
-                    </div>
-
-                    <div class="card_container">
-                        <div class="card">
-                            <div class="card_border"></div>
-                            <h3 class="title">Web design</h3>
-                            <div class="card icon">
-                                <i class="fa-solid fa-border-all fa-xl"></i>
-                            </div>
-                            <p class="description">
-                                Beautiful and responsive web design.
-                                user-friendly, and fully responsive websites that deliver a seamless experience across
-                                devices.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <div class="card_border"></div>
-                            <h3 class="title">Frontend Development</h3>
-                            <div class="card icon">
-                                <i class="fa-solid fa-code fa-xl"></i>
-                            </div>
-                            <p class="description">
-                                Experience in developing websites. Especially in frontend development with knowledge and
-                                skills in modern frontend technologies like HTML, CSS, JavaScript and React library.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <div class="card_border"></div>
-                            <h3 class="title">Mobile</h3>
-                            <div class="card icon">
-                                <i class="fa-solid fa-mobile-screen fa-xl"></i>
-                            </div>
-                            <p class="description">
-                                Responsive websites that adapt perfectly to different screen sizes.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!--============================PROJECTS============================-->
-
-            <div id="projects" class="projects section">
-                <h3 class="section_item_title">Projects</h3>
-                <p class="section_item_text">Projects section</p>
-            </div>
-            <!--============================CONTACT============================-->
-
-            <div id="contact" class="contact section">
-                <h3 class="section_item_title">Contact</h3>
-                <p class="section_item_text">Contact section</p>
-            </div>
-        </div>
-    </div>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my-portfolio</title>
+    <link rel="stylesheet" href="/src/index.css"/>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
