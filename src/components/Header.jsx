@@ -6,40 +6,33 @@ export default function Header({ isHidden }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.header 
-      initial={false}
-      animate={{ y: isHidden ? -100 : 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}    
-      className="fixed top-0 w-full z-50 backdrop-blur bg-slate-900/60 dark:bg-black/40
-        border-b border-black/10 dark:border-white/10"
-    >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
-        <a href="#hero" id="logo" 
-            className="font-3rem font-bold px-6 py-4 block gap-2 
-            transition-transform ease-in-out duration-300 hover:scale-105"
-        >
-          Nam <span>Nguyen</span>
-        </a>
-        <nav className="nav-bar md:flex justify-center mx-auto px-6 py-4 gap-10 text-sm">
-          <a href="#hero" className="hover:opacity-100 opacity-70">Home</a>
-          <a href="#about" className="hover:opacity-100 opacity-70">About</a>
-          <a href="#projects" className="hover:opacity-100 opacity-70">Projects</a>
-          <a href="#contact" className="hover:opacity-100 opacity-70">Contact</a>
-        </nav>
-        <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.3, ease: "easeInOut"}}
-          className="contact-btn md:block text-xs p-2 rounded-full font-mono
-    bg-linear-270 from-[#df8909] to-[#ff1d15]">
-          Contact me
-        </motion.button>
+    <>
+      <motion.header 
+        initial={false}
+        animate={{ y: isHidden ? -100 : 0 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}    
+        className="fixed top-0 w-full z-50 backdrop-blur bg-slate-900/60 dark:bg-black/40
+          border-b border-black/10 dark:border-white/10"
+      >
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-10">
+          <a href="#hero" id="logo" 
+              className="text-sm font-bold py-4 md:px-6 block
+              transition-transform ease-in-out duration-300 hover:scale-105"
+          >
+            Nam <span>Nguyen</span>
+          </a>
+          <nav className="nav-bar flex justify-center mx-auto gap-10 text-sm">
+            <a href="#hero" className="hover:opacity-100 opacity-70">Home</a>
+            <a href="#about" className="hover:opacity-100 opacity-70">About</a>
+            <a href="#projects" className="hover:opacity-100 opacity-70">Projects</a>
+            <a href="#contact" className="hover:opacity-100 opacity-70">Contact</a>
+          </nav>
 
-        <button onClick={() => setIsOpen(true)} className="md:hidden text-2xl">
-          <HiMenu />
-        </button> 
-      </div>
-
+          <button onClick={() => setIsOpen(true)} className="md:hidden text-2xl">
+            <HiMenu />
+          </button> 
+        </div>
+      </motion.header>
       <AnimatePresence>
         {isOpen && (
           <>
@@ -56,8 +49,8 @@ export default function Header({ isHidden }) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="fixed right-0 top-0 w-[75%] max-w-sm z-50
-                bg-slate-900 border-l border-white/10 px-6 py-8"
+              className="fixed right-0 top-0 w-[60%] max-w-sm z-50
+                bg-slate-900 border-2 border-white/30 p-5"
             >
               <div className="flex justify-end mb-8">
                 <button
@@ -84,6 +77,6 @@ export default function Header({ isHidden }) {
           </>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   )
 }
