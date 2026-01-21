@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 assets
+*.txt
+code_collector.js
+src/data/projects.js
