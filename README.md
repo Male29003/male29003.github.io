@@ -1,16 +1,47 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Đây là mã nguồn trang Portfolio cá nhân của tôi (Nguyen Khanh Nam). Dự án này được xây dựng để giới thiệu bản thân, cũng như trình bày kỹ năng lập trình FE cơ bản của mình.
 
-Currently, two official plugins are available:
+## 🛠 Công Nghệ Sử Dụng (Tech Stack)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Core:** [React.js](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/) (Tối ưu tốc độ build và dev server)
+- **Styling:** [TailwindCSS](https://tailwindcss.com/)
+- **Animation:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** React Icons
 
-## React Compiler
+## 🚀 Cài Đặt và Chạy Dự Án
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Để chạy dự án này trên máy local, bạn làm theo các bước sau:
 
-## Expanding the ESLint configuration
+**1. Clone repository về máy:**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone [https://github.com/Male29003/male29003.github.io.git](https://github.com/Male29003/male29003.github.io.git)
+cd male29003.github.io
+```
+
+\*\*2. Cài đặt các thư viện (Dependencies):
+
+```bash
+npm install
+```
+
+\*\*3. Chạy môi trường phát triển (Development):
+
+```bash
+npm run dev
+```
+
+Trang web sẽ chạy tại địa chỉ: http://localhost:5173/
+
+📬 Liên Hệ
+Nếu bạn có bất kỳ câu hỏi nào hoặc muốn kết nối, đừng ngần ngại liên hệ với tôi:
+
+Email: namnguyen29003@gmail.com
+
+LinkedIn: Nguyen Khanh Nam
+
+GitHub: Male29003
+
+© 2024 Nguyen Khanh Nam. Built with ❤️ and React.
