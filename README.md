@@ -21,13 +21,13 @@ git clone [https://github.com/Male29003/male29003.github.io.git](https://github.
 cd male29003.github.io
 ```
 
-\*\*2. Cài đặt các thư viện (Dependencies):
+2. Cài đặt các thư viện (Dependencies):
 
 ```bash
 npm install
 ```
 
-\*\*3. Chạy môi trường phát triển (Development):
+3. Chạy môi trường phát triển (Development):
 
 ```bash
 npm run dev
