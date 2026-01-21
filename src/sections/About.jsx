@@ -1,4 +1,5 @@
 import { motion } from "motion/react"
+import FloatingStack from "../components/about/FloatingStack"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -7,7 +8,7 @@ const fadeUp = {
 
 export default function About() {
   return (
-    <section id="about" className="max-w-7xl mx-auto px-5 py-32 space-y-40">
+    <section id="about" className="max-w-7xl mx-auto px-5 py-32 space-y-20">
       {/* =================== Row 1 ===================*/}
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <motion.div
@@ -22,9 +23,10 @@ export default function About() {
           </h3>
 
           <p className="opacity-70 leading-relaxed">
-            I specialize in building modern web applications using
-            React, TailwindCSS, and other modern frontend tools.
-            I focus on performance, UX, and clean architecture.
+            I specialize in building robust and scalable web applications using React combined with TypeScript 
+            for type-safe and reliable code. Beyond the frontend, I have a solid understanding of Backend concepts 
+            and database management. This full-stack perspective allows me to bridge the gap between design and 
+            logic, ensuring seamless integration and high-performance user interfaces with TailwindCSS.
           </p>
         </motion.div>
 
@@ -34,18 +36,12 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2, staggerChildren: 0.05 }}
-          className="grid grid-cols-3 sm:grid-cols-4 gap-6"
+          className="flex scale-90 md:scale-100 justify-center items-center"
         >
-          {["HTML / CSS / JS", "React", "Tailwind", "Vite", "", "Git", "Figma"].map((tool) => (
-            <div
-              key={tool}
-              className="h-20 rounded-xl bg-white/5 flex items-center justify-center hover:scale-110 transition"
-            >
-              <span className="text-sm opacity-80">{tool}</span>
-            </div>
-          ))}
+          <FloatingStack />
         </motion.div>
       </div>
+
       {/* =================== Row 2 ===================*/}
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <motion.div
@@ -54,8 +50,58 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="h-72 rounded-3xl bg-gradient-to-br from-blue-500/30 to-purple-500/30"
-        />
+          // Xóa class cũ, thay bằng khung terminal
+          className="relative h-80 rounded-3xl bg-[#1e1e1e] border border-white/10 overflow-hidden shadow-2xl"
+        >
+          <div className="absolute -left-20 -top-20 w-32 h-32 bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
+          {/* --- Nội dung Code --- */}
+          <div className="px-12 py-2 font-mono text-sm leading-relaxed overflow-hidden">
+            <div className="text-gray-400">
+              <span className="text-purple-400">const</span> <span className="text-yellow-400">AboutMe</span> = <span className="text-purple-400">()</span> <span className="text-purple-400">=&gt;</span> {"{"}
+            </div>
+            <div className="pl-4">
+              <span className="text-purple-400">const</span> <span className="text-blue-400">profile</span> = {"{"}
+            </div>
+            <div className="pl-8">
+              <span className="text-blue-300">name:</span> <span className="text-green-400">"Nguyen Khanh Nam"</span>,
+            </div>
+            <div className="pl-8">
+              <span className="text-blue-300">role:</span> <span className="text-green-400">"Frontend Developer"</span>,
+            </div>
+            <div className="pl-8">
+              <span className="text-blue-300">focus:</span> <span className="text-yellow-400">{"["}</span>
+            </div>
+            <div className="pl-12">
+              <span className="text-green-400">"Building interactive UI/UX"</span>,
+            </div>
+            <div className="pl-12">
+              <span className="text-green-400">"Web Performance & Animations"</span>,
+            </div>
+            <div className="pl-8">
+              <span className="text-yellow-400">{"]"}</span>,
+            </div>
+            <div className="pl-8">
+              <span className="text-blue-300">goal:</span> <span className="text-green-400">"Become a Software Engineer"</span>,
+            </div>
+            <div className="pl-4">
+              {"}"};
+            </div>
+            
+            <div className="pl-4 mt-2">
+              <span className="text-purple-400">return</span> <span className="text-blue-400">profile</span>;
+            </div>
+
+            <div>{"}"}</div>
+            
+            {/* Con trỏ nhấp nháy */}
+            <motion.div 
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ repeat: Infinity, duration: 0.8 }}
+              className="w-2 h-4 bg-green-400 inline-block ml-1 align-middle"
+            />
+          </div>
+          <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
+        </motion.div>
 
         <motion.div
           variants={fadeUp}
@@ -69,9 +115,10 @@ export default function About() {
           </h3>
 
           <p className="opacity-70 leading-relaxed">
-            I enjoy turning complex problems into simple, beautiful
-            and intuitive designs. In my spare time, I like to learn
-            form new aspects and work on personal projects.
+            I love the combination of logic and creativity in Frontend Development. 
+            My passion is to build beautiful and intuitive websites that help users solve 
+            their problems. I am always eager to learn new things, explore new technologies, 
+            and challenge myself with personal projects to become a better developer.
           </p>
         </motion.div>
       </div>
