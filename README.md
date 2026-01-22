@@ -40,8 +40,8 @@ Nếu bạn có bất kỳ câu hỏi nào hoặc muốn kết nối, đừng ng
 
 Email: namnguyen29003@gmail.com
 
-LinkedIn: Nguyen Khanh Nam
+LinkedIn: [Nguyen Khanh Nam](https://www.linkedin.com/in/nam-nguyen-17b807346/)
 
-GitHub: Male29003
+Githun: [Male29003](https://github.com/Male29003/)
 
 © 2024 Nguyen Khanh Nam. Built with ❤️ and React.
