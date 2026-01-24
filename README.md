@@ -40,6 +40,6 @@ Email: namnguyen29003@gmail.com
 
 LinkedIn: [Nguyen Khanh Nam](https://www.linkedin.com/in/nam-nguyen-17b807346/)
 
-Githun: [Male29003](https://github.com/Male29003/)
+Github: [Male29003](https://github.com/Male29003/)
 
 © 2025 Nguyen Khanh Nam.
