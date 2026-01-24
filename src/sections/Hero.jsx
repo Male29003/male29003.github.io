@@ -1,4 +1,4 @@
-import avatar from '../assets/portfolio-avatar.jpg';
+import avatar from '../assets/avatars/avatar.jpg';
 import { motion } from 'motion/react';
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import SocialLink from '../components/SocialLink';
