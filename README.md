@@ -35,13 +35,11 @@ npm run dev
 
 Trang web sẽ chạy tại địa chỉ: http://localhost:5173/
 
-📬 Liên Hệ
-Nếu bạn có bất kỳ câu hỏi nào hoặc muốn kết nối, đừng ngần ngại liên hệ với tôi:
-
+📬 Nếu bạn có bất kỳ câu hỏi nào hoặc muốn kết nối, đừng ngần ngại liên hệ với tôi:
 Email: namnguyen29003@gmail.com
 
 LinkedIn: [Nguyen Khanh Nam](https://www.linkedin.com/in/nam-nguyen-17b807346/)
 
 Githun: [Male29003](https://github.com/Male29003/)
 
-© 2024 Nguyen Khanh Nam. Built with ❤️ and React.
+© 2025 Nguyen Khanh Nam.
