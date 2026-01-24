@@ -23,7 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-assets
+assets/
+
 *.txt
 code_collector.js
 src/data/projects.js
