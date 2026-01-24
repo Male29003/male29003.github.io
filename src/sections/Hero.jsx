@@ -43,7 +43,7 @@ export default function Hero() {
             </p>
 
             <div className='mt-8 flex items-center justify-center md:justify-start gap-5'>
-              <SocialList icon_size={24} />
+              <SocialList icon_size={22} />
 
               <div className="h-8 w-[1px] bg-slate-700 mx-2" />
               <motion.a 
@@ -52,7 +52,7 @@ export default function Hero() {
                 target="_blank"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.5 }}
-                className="download_cv_btn px-6 py-2.5 rounded-full font-medium text-sm text-white shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-accent hover:shadow-accent/40 transition-all cursor-pointer">
+                className="download_cv_btn px-3 md:px-6 py-2.5 rounded-full font-medium text-sm text-white shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-accent hover:shadow-accent/40 transition-all cursor-pointer">
                 My CV
               </motion.a>
             </div>
