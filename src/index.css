@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0f172a; /* Slate 900 */
+  --color-primary: #6366f1; /* Indigo 500 */
+  --color-secondary: #a3b3ff; /* Indigo 300 */
+  --color-accent: #ec4899; /* Pink 500 */
+  --color-highlight: #22d3ee; /* Cyan 400 */
+  --color-card: #1e293b; /* Slate 800 */
+
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/* Global Reset & Utility Classes bổ sung */
+:root {
+  color-scheme: dark; /* Báo cho trình duyệt biết đây là dark mode */
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-dark);
+  color: #cbd5e1;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===================================== Hero(Home) Section =====================================*/
+/* Gradient text for logo */
+#logo span {
+  background: linear-gradient(
+    270deg,
+    var(--color-highlight),
+    var(--color-primary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Nav-bar underline animation */
+.nav-bar a {
+  position: relative;
+}
+
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(270deg, #df8909, #ff1d15);
+  transition:
+    width 0.3s ease,
+    left 0.3s ease;
+}
+
+.nav-bar a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+}
