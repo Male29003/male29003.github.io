@@ -1,8 +1,8 @@
-import avatar from '../assets/avatars/avatar.jpg';
-import { motion } from 'motion/react';
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
-import SocialLink from '../components/SocialLink';
+import avatar from '../assets/portfolio-avatar.jpg';
 import cv from '../assets/KNam_CV.pdf';
+
+import { motion } from 'motion/react';
+import SocialList from '../components/SocialList';
 
 export default function Hero() {
   return (
@@ -43,11 +43,8 @@ export default function Hero() {
             </p>
 
             <div className='mt-8 flex items-center justify-center md:justify-start gap-5'>
-              <div className="flex items-center gap-6">
-                <SocialLink href="https://www.linkedin.com/in/nam-nguy%E1%BB%85n-17b807346/" icon={<FaLinkedin size={24} />} />
-                <SocialLink href="https://github.com/Male29003/" icon={<FaGithub size={24} />} />
-                <SocialLink href="mailto:namnguyen29003@gmail.com" icon={<FaEnvelope size={24} />} />
-              </div>
+              <SocialList icon_size={24} />
+
               <div className="h-8 w-[1px] bg-slate-700 mx-2" />
               <motion.a 
                 href={cv}
@@ -55,7 +52,7 @@ export default function Hero() {
                 target="_blank"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.5 }}
-                className="px-6 py-2.5 rounded-full font-medium text-sm text-white shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-accent hover:shadow-accent/40 transition-all cursor-pointer">
+                className="download_cv_btn px-6 py-2.5 rounded-full font-medium text-sm text-white shadow-lg shadow-primary/20 bg-gradient-to-r from-primary to-accent hover:shadow-accent/40 transition-all cursor-pointer">
                 My CV
               </motion.a>
             </div>

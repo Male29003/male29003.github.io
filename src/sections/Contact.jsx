@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
-import SocialLink from "../components/SocialLink"
+import SocialList from "../components/SocialList";
+
 import cv from '../assets/KNam_CV.pdf';
 
 export default function Contact() {
@@ -35,11 +35,8 @@ export default function Contact() {
           My CV
         </motion.a>
 
-        <div className="flex justify-center gap-6 mt-10 text-xl">
-          <SocialLink href="https://github.com/Male29003/" icon={<FaGithub size={20} />} />
-          <SocialLink href="https://www.linkedin.com/in/nam-nguy%E1%BB%85n-17b807346/" icon={<FaLinkedin size={20} />} />
-          <SocialLink href="mailto:namnguyen29003@gmail.com" icon={<FaEnvelope size={20} />} />
-        </div>
+        <SocialList icon_size={20} />
+
       </motion.div>
     </section>
   )
