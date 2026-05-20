@@ -1,4 +1,4 @@
-import ProjectCard from "../components/projects/Card";
+import ProjectCard from "../components/projects/ProjectCard";
 import ProjectList from "../components/projects/ProjectList";
 import { PROJECTS  } from "../data/projects";
 

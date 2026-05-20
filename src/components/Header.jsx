@@ -9,7 +9,7 @@ export default function Header({ isHidden }) {
     <>
       <motion.header 
         initial={false}
-        animate={{ y: isHidden ? -100 : 0 }}
+        animate={{ y: (isHidden && !isOpen) ? -100 : 0 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}    
         className="fixed top-0 w-full z-50 backdrop-blur bg-slate-900/60 dark:bg-black/40
           border-b border-black/10 dark:border-white/10"

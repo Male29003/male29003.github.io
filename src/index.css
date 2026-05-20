@@ -64,7 +64,7 @@ html {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: linear-gradient(270deg, #df8909, #ff1d15);
+  background: var(--color-highlight);
   transition:
     width 0.3s ease,
     left 0.3s ease;
@@ -78,5 +78,48 @@ html {
 @media (max-width: 768px) {
   .nav-bar {
     display: none;
+  }
+}
+
+/* Thêm vào cuối file index.css */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 1rem;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 1rem;
+  min-width: 100%;
+  animation: scroll-x 20s linear infinite;
+}
+
+.marquee-content.reverse {
+  animation: scroll-x-reverse 20s linear infinite;
+}
+
+/* Tạm dừng chạy khi di chuột vào */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1rem));
+  }
+}
+
+@keyframes scroll-x-reverse {
+  from {
+    transform: translateX(calc(-100% - 1rem));
+  }
+  to {
+    transform: translateX(0);
   }
 }

@@ -22,10 +22,10 @@ export default function MainLayout({children}){
     }, [])
     
     return(
-        <div className="bg-dark text-slate-200 min-h-screen">
+        <div className="bg-dark text-slate-200 min-h-screen p-8 md:p-10">
             <Header isHidden={isHidden} />
             <main>{children}</main>
-            <p className="text-xs opacity-50 text-center pb-5">
+            <p className="text-xs opacity-50 text-center p-5">
                  Designed & Built by Nam Nguyen
             </p>
         </div>
