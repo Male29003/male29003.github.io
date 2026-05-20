@@ -1,127 +1,99 @@
-import { motion } from "motion/react"
-import FloatingStack from "../components/about/FloatingStack"
+import { motion } from "motion/react";
+import { FaReact, FaNodeJs, FaGithub, FaFigma, FaDatabase } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiJavascript } from "react-icons/si";
+// Data cho thanh chạy (Marquee)
+const ROW_1_TECH = [
+  { name: "React.js", icon: <FaReact className="text-[#61DAFB]" /> },
+  { name: "TailwindCSS", icon: <SiTailwindcss className="text-[#38B2AC]" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+  { name: "Redis", icon: <FaDatabase className="text-[#DC382D]" /> },
+];
+
+const ROW_2_TECH = [
+  { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+  { name: "Git/GitHub", icon: <FaGithub className="text-white" /> },
+  { name: "Zustand", icon: <span className="text-gray-400 font-bold">🐻</span> },
+  { name: "Figma", icon: <FaFigma className="text-[#F24E1E]" /> },
+];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 }
-}
+};
 
 export default function About() {
   return (
-    <section id="about" className="max-w-7xl mx-auto px-5 py-32 space-y-20">
-      {/* =================== Row 1 ===================*/}
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <h3 className="text-3xl font-bold mb-6">
-            Tools & Technologies
-          </h3>
+    <section id="about" className="relative pt-32 pb-20">
+      <div className="max-w-7xl mx-auto px-6 space-y-20">
+        
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          {/* =================== About me =================== */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-highlight to-primary">
+                About Me
+              </span>
+            </h2>
 
-          <p className="opacity-70 leading-relaxed">
-            I specialize in building robust and scalable web applications using React combined with TypeScript 
-            for type-safe and reliable code. Beyond the frontend, I have a solid understanding of Backend concepts 
-            and database management. This full-stack perspective allows me to bridge the gap between design and 
-            logic, ensuring seamless integration and high-performance user interfaces with TailwindCSS.
-          </p>
-        </motion.div>
+            <div className="space-y-4 text-slate-400 leading-relaxed text-lg">
+              <p>
+                I hold an Engineer's Degree in Software Engineering. As a developer specializing in Frontend development, I dedicate myself to crafting high-performance, pixel-perfect, and highly responsive web user interfaces.
+              </p>
+              <p>
+                Beyond just writing UI components, I bring strong system design thinking to every project. I enjoy analyzing how web interfaces integrate with complex backend systems and cloud storage, ensuring seamless data flow and optimized client-side performance.
+              </p>
+              <p>
+                I am a highly adaptable and self-motivated developer with a strong willingness to learn. I constantly challenge myself with new architectural concepts and codebases, striving to grow my engineering capabilities and solve real-world problems effectively.
+              </p>
+            </div>
+          </motion.div>
 
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2, staggerChildren: 0.05 }}
-          className="flex scale-90 md:scale-100 justify-center items-center"
-        >
-          <FloatingStack />
-        </motion.div>
-      </div>
+          {/* =================== Tech Stack =================== */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col gap-6 overflow-hidden rounded-3xl bg-card border border-white/5 p-8 shadow-2xl"
+          >
+            <h3 className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2">Technologies</h3>
+            <div className="marquee-container [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="marquee-content">
+                  {ROW_1_TECH.map((tech, idx) => (
+                    <div key={idx} className="flex items-center flex-1 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 font-medium whitespace-nowrap">
+                      {tech.icon} {tech.name}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
 
-      {/* =================== Row 2 ===================*/}
-      <div className="grid md:grid-cols-2 gap-16 items-center">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          // Xóa class cũ, thay bằng khung terminal
-          className="relative h-80 rounded-3xl bg-[#1e1e1e] border border-white/10 overflow-hidden shadow-2xl"
-        >
-          <div className="absolute -left-20 -top-20 w-32 h-32 bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
-          {/* --- Nội dung Code --- */}
-          <div className="px-12 py-2 font-mono text-sm leading-relaxed overflow-hidden">
-            <div className="text-gray-400">
-              <span className="text-purple-400">const</span> <span className="text-yellow-400">AboutMe</span> = <span className="text-purple-400">()</span> <span className="text-purple-400">=&gt;</span> {"{"}
-            </div>
-            <div className="pl-4">
-              <span className="text-purple-400">const</span> <span className="text-blue-400">profile</span> = {"{"}
-            </div>
-            <div className="pl-8">
-              <span className="text-blue-300">name:</span> <span className="text-green-400">"Nguyen Khanh Nam"</span>,
-            </div>
-            <div className="pl-8">
-              <span className="text-blue-300">role:</span> <span className="text-green-400">"Frontend Developer"</span>,
-            </div>
-            <div className="pl-8">
-              <span className="text-blue-300">focus:</span> <span className="text-yellow-400">{"["}</span>
-            </div>
-            <div className="pl-12">
-              <span className="text-green-400">"Building interactive UI/UX"</span>,
-            </div>
-            <div className="pl-12">
-              <span className="text-green-400">"Web Performance & Animations"</span>,
-            </div>
-            <div className="pl-8">
-              <span className="text-yellow-400">{"]"}</span>,
-            </div>
-            <div className="pl-8">
-              <span className="text-blue-300">goal:</span> <span className="text-green-400">"Become a Software Engineer"</span>,
-            </div>
-            <div className="pl-4">
-              {"}"};
+            <div className="marquee-container [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="marquee-content reverse">
+                  {ROW_2_TECH.map((tech, idx) => (
+                    <div key={idx} className="flex items-center flex-1 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 font-medium whitespace-nowrap">
+                      {tech.icon} {tech.name}
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
             
-            <div className="pl-4 mt-2">
-              <span className="text-purple-400">return</span> <span className="text-blue-400">profile</span>;
-            </div>
+          </motion.div>
+        </div>
 
-            <div>{"}"}</div>
-            
-            {/* Con trỏ nhấp nháy */}
-            <motion.div 
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ repeat: Infinity, duration: 0.8 }}
-              className="w-2 h-4 bg-green-400 inline-block ml-1 align-middle"
-            />
-          </div>
-          <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-purple-500/20 blur-3xl rounded-full pointer-events-none" />
-        </motion.div>
-
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          <h3 className="text-3xl font-bold mb-6">
-            About Me
-          </h3>
-
-          <p className="opacity-70 leading-relaxed">
-            I love the combination of logic and creativity in Frontend Development. 
-            My passion is to build beautiful and intuitive websites that help users solve 
-            their problems. I am always eager to learn new things, explore new technologies, 
-            and challenge myself with personal projects to become a better developer.
-          </p>
-        </motion.div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50" />
     </section>
   )
 }
