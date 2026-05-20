@@ -1,6 +1,5 @@
 import avatar from '../assets/portfolio-avatar.jpg';
 import cv from '../assets/KNam_CV.pdf';
-
 import { motion } from 'motion/react';
 import SocialList from '../components/SocialList';
 

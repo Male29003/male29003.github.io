@@ -1,17 +1,19 @@
 import { motion } from "motion/react";
-import { FaReact, FaNodeJs, FaGithub, FaFigma, FaDatabase } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript, SiJavascript } from "react-icons/si";
+import { FaReact, FaNodeJs, FaGithub, FaFigma, FaDatabase, FaGitAlt  } from "react-icons/fa";
+import { SiTailwindcss, SiTypescript, SiJavascript, SiDjango  } from "react-icons/si";
 // Data cho thanh chạy (Marquee)
 const ROW_1_TECH = [
+  { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
   { name: "React.js", icon: <FaReact className="text-[#61DAFB]" /> },
   { name: "TailwindCSS", icon: <SiTailwindcss className="text-[#38B2AC]" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
-  { name: "Redis", icon: <FaDatabase className="text-[#DC382D]" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" /> },
 ];
 
 const ROW_2_TECH = [
-  { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
-  { name: "Git/GitHub", icon: <FaGithub className="text-white" /> },
+  { name: "Redis", icon: <FaDatabase className="text-[#DC382D]" /> },
+  { name: "Django", icon: <SiDjango className="text-[#092E20]" /> },
+  { name: "Git", icon: <FaGitAlt className="text-[#F05033]" /> },
   { name: "Zustand", icon: <span className="text-gray-400 font-bold">🐻</span> },
   { name: "Figma", icon: <FaFigma className="text-[#F24E1E]" /> },
 ];
@@ -63,13 +65,19 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-col gap-6 overflow-hidden rounded-3xl bg-card border border-white/5 p-8 shadow-2xl"
           >
-            <h3 className="text-secondary font-semibold tracking-wider uppercase text-sm mb-2">Technologies</h3>
+            <h3 className="text-secondary font-bold tracking-wider uppercase text-lg mb-1">
+              Technologies
+            </h3>
             <div className="marquee-container [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
               {[...Array(2)].map((_, i) => (
                 <div key={i} className="marquee-content">
                   {ROW_1_TECH.map((tech, idx) => (
                     <div key={idx} className="flex items-center flex-1 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 font-medium whitespace-nowrap">
-                      {tech.icon} {tech.name}
+                      <p className="flex items-center justify-start gap-2">
+                        <span>{tech.icon}</span>
+                        <span>{tech.name}</span>
+                      </p>
+                      
                     </div>
                   ))}
                 </div>
@@ -81,7 +89,10 @@ export default function About() {
                 <div key={i} className="marquee-content reverse">
                   {ROW_2_TECH.map((tech, idx) => (
                     <div key={idx} className="flex items-center flex-1 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 font-medium whitespace-nowrap">
-                      {tech.icon} {tech.name}
+                      <p className="flex items-center justify-start gap-2">
+                        <span>{tech.icon}</span>
+                        <span>{tech.name}</span>
+                      </p>
                     </div>
                   ))}
                 </div>
