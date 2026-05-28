@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import logoImg from "../assets/bussiness_logo.png";
 
 export default function Header({ isHidden }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,7 @@ export default function Header({ isHidden }) {
               transition-transform ease-in-out duration-300 hover:scale-105"
           >
             <div className="w-100% h-100% flex gap-2 items-center">
-              <img
-                className="w-8 h-8 "
-                src="src/assets/bussiness_logo.png"
-                alt=""
-              />
+              <img className="w-8 h-8 " src={logoImg} alt="" />
               <p>
                 Nam <span>Nguyen</span>
               </p>
