@@ -24,18 +24,19 @@ const SKILL_CARDS = [
 
 export default function Skills() {
   return (
-    <section 
-        id="skills" 
-        className="relative py-24 px-6 max-w-7xl mx-auto"
-    >
+    <section id="skills" className="relative py-24 px-6 max-w-7xl mx-auto">
       <div className="mb-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-highlight via-primary to-accent">
-            What I Bring to the Table
-          </span>
-        </h2>
-        <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-          My core competencies bridge the gap between technical execution and user experience.
+        <div className="relative flex items-center justify-center">
+          <div className="absolute w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+          <h2 className="relative px-6 text-3xl md:text-4xl font-bold bg-dark">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-highlight via-primary to-accent">
+              What I Bring to the Table
+            </span>
+          </h2>
+        </div>
+        <p className="text-slate-400 max-w-2xl mx-auto text-lg mt-4">
+          My core competencies bridge the gap between technical execution and
+          user experience.
         </p>
       </div>
 
@@ -51,12 +52,12 @@ export default function Skills() {
             className="group p-8 rounded-3xl bg-card border border-white/5 hover:border-white/20 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 flex flex-col items-start h-full"
           >
             <div className="flex gap-5">
-                <div className="transform group-hover:scale-110 transition-transform duration-300">
-                    {card.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
-                    {card.title}
-                </h3>
+              <div className="transform group-hover:scale-110 transition-transform duration-300">
+                {card.icon}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {card.title}
+              </h3>
             </div>
             <p className="text-slate-400 leading-relaxed text-sm">
               {card.description}
@@ -64,6 +65,7 @@ export default function Skills() {
           </motion.div>
         ))}
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-80"></div>
     </section>
   );
 }

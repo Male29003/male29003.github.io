@@ -1,36 +1,58 @@
-import { motion, AnimatePresence } from "motion/react"
-import { useState } from "react"
-import { HiMenu, HiX } from "react-icons/hi"
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Header({ isHidden }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <motion.header 
+      <motion.header
         initial={false}
-        animate={{ y: (isHidden && !isOpen) ? -100 : 0 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}    
+        animate={{ y: isHidden && !isOpen ? -100 : 0 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
         className="fixed top-0 w-full z-50 backdrop-blur bg-slate-900/60 dark:bg-black/40
           border-b border-black/10 dark:border-white/10"
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center px-10">
-          <a href="#hero" id="logo" 
-              className="text-sm font-bold py-4 md:px-6 block
+          <a
+            href="#hero"
+            id="logo"
+            className="text-sm font-bold py-4 md:px-6 block
               transition-transform ease-in-out duration-300 hover:scale-105"
           >
-            Nam <span>Nguyen</span>
+            <div className="w-100% h-100% flex gap-2 items-center">
+              <img
+                className="w-8 h-8 "
+                src="src/assets/bussiness_logo.png"
+                alt=""
+              />
+              <p>
+                Nam <span>Nguyen</span>
+              </p>
+            </div>
           </a>
           <nav className="nav-bar flex justify-center mx-auto gap-10 text-sm">
-            <a href="#hero" className="hover:opacity-100 opacity-70">Home</a>
-            <a href="#about" className="hover:opacity-100 opacity-70">About</a>
-            <a href="#projects" className="hover:opacity-100 opacity-70">Projects</a>
-            <a href="#contact" className="hover:opacity-100 opacity-70">Contact</a>
+            <a href="#hero" className="hover:opacity-100 opacity-70">
+              Home
+            </a>
+            <a href="#about" className="hover:opacity-100 opacity-70">
+              About
+            </a>
+            <a href="#projects" className="hover:opacity-100 opacity-70">
+              Projects
+            </a>
+            <a href="#contact" className="hover:opacity-100 opacity-70">
+              Contact
+            </a>
           </nav>
 
-          <button onClick={() => setIsOpen(true)} className="md:hidden text-2xl">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="md:hidden text-2xl"
+          >
             <HiMenu />
-          </button> 
+          </button>
         </div>
       </motion.header>
       <AnimatePresence>
@@ -53,10 +75,7 @@ export default function Header({ isHidden }) {
                 bg-slate-900 border-2 border-white/30 p-5"
             >
               <div className="flex justify-end mb-8">
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="text-2xl"
-                >
+                <button onClick={() => setIsOpen(false)} className="text-2xl">
                   <HiX />
                 </button>
               </div>
@@ -78,5 +97,5 @@ export default function Header({ isHidden }) {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }
